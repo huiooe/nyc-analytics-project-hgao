@@ -90,8 +90,6 @@ sources:
           - name: landmark
             description: Nearby landmark or point of interest
 
-version: 2
-sources:
   - name: nyc_hw3_raw_data
     description: Raw data loaded from NYC Open Data
     database: hui-gao-cis-4400-spring26
