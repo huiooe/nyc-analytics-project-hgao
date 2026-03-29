@@ -132,7 +132,7 @@ sources:
             description: application submission time
           - name: bin
             description: BIN
-          - name: latiitude
+          - name: latitude
             description: latitude coordinate
           - name: longitude
             description: longtitude coordinate
