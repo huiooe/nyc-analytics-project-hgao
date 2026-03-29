@@ -10,40 +10,39 @@ cleaned AS (
        -- Get all columns from source, except ones we're transforming below
        -- To do cleaning on them or explicitly cast them as types just in case
        * EXCEPT (
-           object_id,
-           global_id,
-           closed_date,
-           restaurant,
-           legal_name,
-           dba_name,
+           objectid,
+           globalid,
+           restaurant_name,
+           legal_business_name,
+           doing_business_as_dba,
            zip,
            borough,
            building_number,
-           street_name,
+           street,
            business_address,
            bbl,
            latitude,
            longitude,
-           permit_id,
-           sidewalk_seating_status,
-           alcohol_qualification,
+           food_service_establishment,
+           approved_for_sidewalk_seating,
+           qualify_alcohol,
            healthcompliance_terms,
-           roadway_seating_status,
-           submission_time,
-           census,
+           approved_for_roadway_seating,
+           time_of_submission,
+           census_tract,
            community_board,
-           council,
-           landmark_building,
+           council_district,
+           landmark_district_or_building,
            nta,
-           landmark_terms,
+           landmarkdistrict_terms,
            roadway_dimensions_area,
            roadway_dimensions_length,
            roadway_dimensions_width,
            sidewalk_dimensions_area,
            sidewalk_dimensions_length,
            sidewalk_dimensions_width,
-           license_type,
-           serial_number
+           sla_license_type,
+           sla_serial_number
        ),
 
        -- Identifiers
@@ -92,14 +91,13 @@ cleaned AS (
        CAST(approved_for_roadway_seating AS STRING) AS roadway_seating_status,
 
        -- Date/Time
-       CAST(time_of_submission) AS TIMESTAMP) AS submission_time,
+       CAST(time_of_submission) AS TIMESTAMP AS submission_time,
 
-       -- district information
-       CAST(bbl AS STRING) AS bbl,
-       CAST(census_tract AS STRING) AS census,
-       CAST(community_board AS STRING) AS community_board,
-       CAST(council_district AS STRING) AS council,
-       CAST(nta AS STRING) AS nta,
+      -- district information
+      CAST(census_tract AS STRING) AS census,
+      CAST(community_board AS STRING) AS community_board,
+      CAST(council_district AS STRING) AS council,
+      CAST(nta AS STRING) AS nta,
 
        -- landmark
        CAST(landmark_district_or_building AS STRING) AS landmark_building,
@@ -122,8 +120,8 @@ cleaned AS (
    FROM source
 
    -- Filters
-   WHERE object_id IS NOT NULL
-   AND global_id IS NOT NULL
+   WHERE objectid IS NOT NULL
+   AND globalid IS NOT NULL
    AND borough IS NOT NULL
 
 SELECT * FROM cleaned
