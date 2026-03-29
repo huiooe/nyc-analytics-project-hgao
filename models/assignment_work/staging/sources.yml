@@ -89,7 +89,6 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
-    version: 2
 
       - name: source_nyc_open_restaurant_apps
         description: |
