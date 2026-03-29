@@ -82,10 +82,10 @@ cleaned AS (
 
         -- Application status
         CAST(food_service_establishment AS STRING) AS permit_id,
-        CAST(approved_for_sidewalk_seating AS STRING) AS sidewalk_seating_status,
+        CAST(approved_for_sidewalk_seating AS STRING) AS approved_for_sidewalk_seating,
         CAST(qualify_alcohol AS STRING) AS alcohol_qualification,       
         CAST(healthcompliance_terms AS STRING) AS healthcompliance_terms,
-        CAST(approved_for_roadway_seating AS STRING) AS roadway_seating_status,
+        CAST(approved_for_roadway_seating AS STRING) AS approved_for_roadway_seating,
 
         -- Date/Time
         CAST(time_of_submission AS TIMESTAMP) AS time_of_submission,
