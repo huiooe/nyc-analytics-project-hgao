@@ -88,7 +88,7 @@ cleaned AS (
         CAST(approved_for_roadway_seating AS STRING) AS roadway_seating_status,
 
         -- Date/Time
-        CAST(time_of_submission AS TIMESTAMP) AS submission_time,
+        CAST(time_of_submission AS TIMESTAMP) AS time_of_submission,
 
         -- District info
         CAST(census_tract AS STRING) AS census,
