@@ -1,6 +1,6 @@
 version: 2
 sources:
-  - name: nyc_hw3_raw_data
+  - name: raw
     description: Raw data loaded from NYC Open Data
     database: hui-gao-cis-4400-spring26
     schema: nyc_hw3_raw_data 
