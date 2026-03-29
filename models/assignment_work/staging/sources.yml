@@ -89,3 +89,83 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
+    version: 2
+
+      - name: source_nyc_open_restaurant_apps
+        description: |
+          NYC open restaurant application for sidewalk seatings.
+          One row per application.
+        columns:
+          - name: objectid
+            description: object ID for the service request
+            tests:
+              - unique
+              - not_null
+          - name: globalid
+            description: global identification
+          - name: seating_interest_sidewalk
+            description: interest in sidewalk/roadway/both
+          - name: restaurant_name
+            description: restaurant name
+          - name: legal_business_name
+            description: restaurant legal business name
+          - name: doing_business_as_dba
+            description: restaurant dba name
+          - name: building_number
+            description: building number
+          - name: street
+            description: street
+          - name: borough
+            description: borough
+          - name: zip
+            description: Zip code
+          - name: business_address
+            description: Street address of the business
+          - name: food_service_establishment
+            description: food service establishment permit ID
+          - name: approved_for_sidewalk_seating
+            description: application status
+          - name: qualify_alcohol
+            description: alcohol qualification
+          - name: healthcompliance_terms
+            description: health compliance terms
+          - name: time_of_submission
+            description: application submission time
+          - name: bin
+            description: BIN
+          - name: latiitude
+            description: latitude coordinate
+          - name: longitude
+            description: longtitude coordinate
+          - name: approved_for_roadway_seating
+            description: roadway seating approval
+          - name: bbl
+            description: Borough Block Lot Number
+          - name: census_tract
+            description: census tract
+          - name: community_board
+            description: community board
+          - name: council_district
+            description: district council
+          - name: landmark_district_or_building
+            description: landmark or building district
+          - name: landmarkdistrict_terms
+            description: terms of landmark district
+          - name: nta
+            description: nta
+          - name: roadway_dimensions_area
+            description: area of roadway seating dimensions
+          - name: roadway_dimensions_length
+            description: roadway seating area length
+          - name: roadway_dimensions_width
+            description: roadway seating area width
+          - name: sidewalk_dimensions_area
+            description: sidewalk seatings area
+          - name: sidewalk_dimensions_length
+            description: sidewalk seating area length
+          - name: sidewalk_dimensions_width
+            description: sidewalk seating area width
+          - name: sla_license_type
+            description: license type
+          - name: sla_serial_number
+            description: serial number
